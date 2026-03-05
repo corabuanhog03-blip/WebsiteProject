@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GlowSkin - Skincare</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">GlowSkin</div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <nav id="navMenu">
+        <a onclick="showSection('home', this)" class="active-link">Home</a>
+        <a onclick="showSection('products', this)">Products</a>
+        <a onclick="showSection('services', this)">Services</a>
+        <a onclick="showSection('blog', this)">Blog</a>
+        <a onclick="showSection('testimonials', this)">Testimonials</a>
+        <a onclick="showSection('about', this)">About</a>
+        <a onclick="showSection('contact', this)">Contact</a>
+    </nav>
+
+    <div class="cart">
+        🛒 <span id="cartCount">0</span>
+    </div>
+</header>
+
+<!-- HOME -->
+<section id="home" class="section active">
+    <div class="hero">
+        <img src="images/hero.jpg" alt="Skincare Banner">
+        <div class="hero-text">
+            <h1>Reveal Your Natural Glow</h1>
+            <p>Premium skincare made with gentle ingredients.</p>
+            <button onclick="showSection('products')">Shop Now</button>
+        </div>
+    </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="section">
+    <h2 class="section-title">Our Products</h2>
+
+    <div class="product-container">
+
+        <div class="product-card">
+            <img src="images/cleanser.jpg" alt="Cleanser">
+            <h3>Hydrating Cleanser</h3>
+            <p>Gentle daily face wash.</p>
+            <span>₱299</span>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/serum.jpg" alt="Serum">
+            <h3>Vitamin C Serum</h3>
+            <p>Brightens and smoothens skin.</p>
+            <span>₱499</span>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/moisturizer.jpg" alt="Moisturizer">
+            <h3>Moisturizing Cream</h3>
+            <p>Deep hydration formula.</p>
+            <span>₱399</span>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section">
+    <h2 class="section-title">Our Services</h2>
+
+    <div class="product-container">
+        <div class="product-card">
+            <h3>Free Skin Consultation</h3>
+            <p>Personalized skincare advice from experts.</p>
+            <button onclick="bookService()">Book Now</button>
+        </div>
+
+        <div class="product-card">
+            <h3>Skin Analysis</h3>
+            <p>Professional skin assessment service.</p>
+            <button onclick="bookService()">Book Now</button>
+        </div>
+
+        <div class="product-card">
+            <h3>Facial Treatment</h3>
+            <p>Deep cleansing and hydration therapy.</p>
+            <button onclick="bookService()">Book Now</button>
+        </div>
+    </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog" class="section">
+    <h2 class="section-title">Skincare Tips</h2>
+
+    <div class="product-container">
+        <div class="product-card">
+            <h3>5 Steps for Healthy Skin</h3>
+            <p>Cleanse, Tone, Treat, Moisturize, Protect.</p>
+            <button onclick="readMore()">Read More</button>
+        </div>
+
+        <div class="product-card">
+            <h3>Best Routine for Oily Skin</h3>
+            <p>Lightweight, oil-free products work best.</p>
+            <button onclick="readMore()">Read More</button>
+        </div>
+
+        <div class="product-card">
+            <h3>How to Use Vitamin C Serum</h3>
+            <p>Apply every morning before sunscreen.</p>
+            <button onclick="readMore()">Read More</button>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="section">
+    <h2 class="section-title">Customer Reviews</h2>
+
+    <div class="product-container">
+        <div class="product-card">
+            <h3>⭐⭐⭐⭐⭐</h3>
+            <p>"My skin improved in just 2 weeks!"</p>
+            <strong>- Maria L.</strong>
+        </div>
+
+        <div class="product-card">
+            <h3>⭐⭐⭐⭐</h3>
+            <p>"Very affordable and effective products."</p>
+            <strong>- Angela D.</strong>
+        </div>
+
+        <div class="product-card">
+            <h3>⭐⭐⭐⭐⭐</h3>
+            <p>"Best skincare brand I've tried!"</p>
+            <strong>- Carla M.</strong>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+    <div class="container">
+        <div class="about-box">
+            <h2>About GlowSkin</h2>
+
+            <p class="about-intro">
+                GlowSkin is an academic project created for educational purposes only. 
+            This website demonstrates responsive web design and interactive features 
+            using HTML, CSS, and JavaScript. All content is fictional.
+            </p>
+
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>🌿 Our Mission</h3>
+                    <p>To empower confidence through healthy and glowing skin.</p>
+                </div>
+
+                <div class="about-card">
+                    <h3>✨ Our Vision</h3>
+                    <p>To become a trusted skincare brand in the Philippines.</p>
+                </div>
+
+                <div class="about-card">
+                    <h3>💖 Why Choose Us?</h3>
+                    <p>Natural ingredients, cruelty-free, dermatologist-tested, and made for tropical climate.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+    <div class="container">
+        <div class="contact-box">
+            <h2>Contact Us</h2>
+
+            <div class="contact-grid">
+
+                <!-- Contact Form -->
+                <form id="contactForm" class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>📧 support@glowskin.ph</p>
+                    <p>📱 +63 912 345 6789</p>
+                    <p>📍 Metro Manila, Philippines</p>
+
+                    <div class="social-icons">
+                        <span>🌐 Facebook</span><br>
+                        <span>📷 Instagram</span><br>
+                        <span>🎵 TikTok</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © 2026 CORA BUANHOG - EDUCATIONAL PURPOSES ONLY!
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
